@@ -12,6 +12,7 @@ MAINTAINER Phylroy Lopez
 RUN sed -i '/^.*standards.*$/d' /var/oscli/Gemfile \
 && echo "gem 'openstudio-standards', :github => 'NREL/openstudio-standards', :branch => 'nrcan'" | sudo tee -a /var/oscli/Gemfile \
 && export start=`pwd` && cd /var/oscli/ && bundle update openstudio-standards && cd $start
+
 ENTRYPOINT ["rails-entrypoint"]
 
 CMD ["/usr/local/bin/start-server"]
