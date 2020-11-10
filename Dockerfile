@@ -5,7 +5,7 @@
 # NOTES:            Currently this is one big dockerfile and non-optimal.
 
 #may include suffix
-ARG OPENSTUDIO_VERSION=3.1.0
+ARG OPENSTUDIO_VERSION=3.0.1
 FROM nrel/openstudio-server:$OPENSTUDIO_VERSION as base
 MAINTAINER Phylroy Lopez
 #Update CLI to use NRCan branch, the oscli gems are kept in /var/oscli
